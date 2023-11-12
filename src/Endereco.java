@@ -63,9 +63,9 @@ public class Endereco {
         this.estado = estado;
     }
 
-    @Override
-    public String toString() {
-        return "Rua:" + rua + ", numero:" + numero + "\nBairro:" + bairro + "\nCEP:" + CEP + ", Cidade:"
-                + cidade + " - Estado: " + estado;
+    public String paraString() {
+        String enderecoCompleto = "Rua: " + rua + ", Numero: " + numero + "\nBairro: " + bairro + "\nCEP: " + CEP + ", " +
+                "Cidade: " + cidade + " - Estado: " + estado;
+        return enderecoCompleto;
     }
 }

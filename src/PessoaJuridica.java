@@ -37,11 +37,12 @@ public class PessoaJuridica extends Cliente {
 
     }
 
-    @Override
-    public String toString() {
-        return "pessoaJuridica [CNPJ=" + CNPJ + "Endereço" + getEndereco() + ", razaoSocial=" + razaoSocial
-                + ", prazoMax="
-                + prazoMax + "Data Cadastro" + getDataCadastro() + "]";
+    public String paraString() {
+        String dadosPessoaJuridica = "pessoaJuridica {CNPJ = " + CNPJ + ", Endereço = " + getEndereco() +
+                ", razaoSocial = " + razaoSocial
+                + ", prazoMax = "
+                + prazoMax + ", Data Cadastro = " + getDataCadastro() + "}";
+        return dadosPessoaJuridica;
     }
 
 }

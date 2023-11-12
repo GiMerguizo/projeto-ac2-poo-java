@@ -30,4 +30,8 @@ public class Cliente {
         this.dataCadastro = dataCadastro;
     }
 
+    public String paraString() {
+        String dadosCliente = "Nome: " + nome + "\nEndereço: " + endereco + "\nData de Cadastro: " + dataCadastro;
+        return dadosCliente;
+    }
 }

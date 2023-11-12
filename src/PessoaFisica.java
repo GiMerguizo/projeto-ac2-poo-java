@@ -1,12 +1,11 @@
 public class PessoaFisica extends Cliente {
-
     private String CPF;
-    private int QtdMaxParcelas;
+    private int qtdMaxParcelas;
 
     public PessoaFisica(String nome, Endereco endereco, int dataCadastro, String CPF, int qtdMaxParcelas) {
         super(nome, endereco, dataCadastro);
         this.CPF = CPF;
-        QtdMaxParcelas = qtdMaxParcelas;
+        this.qtdMaxParcelas = qtdMaxParcelas;
     }
 
     public String getCPF() {
@@ -18,24 +17,21 @@ public class PessoaFisica extends Cliente {
     }
 
     public int getQtdMaxParcelas() {
-        return QtdMaxParcelas;
+        return qtdMaxParcelas;
     }
 
     public void setQtdMaxParcelas(int qtdMaxParcelas) {
-        QtdMaxParcelas = qtdMaxParcelas;
+        qtdMaxParcelas = qtdMaxParcelas;
     }
 
-    @Override
-    public String toString() {
-        return "PessoaFisica{" +
-                "nome='" + getNome() + '\'' +
-                ", endereço=" + getEndereco() +
-                ", dataCadastro=" + getDataCadastro() +
-                ", cpf='" + CPF + '\'' +
-                ", quantidadeMaximaParcelas=" + QtdMaxParcelas +
+    public String paraString() {
+        String dadosPessoaFisica = "PessoaFisica {" +
+                "nome = " + getNome() + '\'' +
+                ", endereço = " + getEndereco() +
+                ", dataCadastro = " + getDataCadastro() +
+                ", cpf = " + CPF + '\'' +
+                ", quantidadeMaximaParcelas = " + qtdMaxParcelas +
                 '}';
-    }   
-
-    
-
+        return dadosPessoaFisica;
+    }
 }
